@@ -1,0 +1,183 @@
+:root {
+  --filter-button: #e1e4ea;
+  --primary-color: #e54065;
+  --border-color: #cfd2dc;
+  --background: #f4f5f9;
+  --text-color: #636363;
+  --read-background: #f2f2f2;
+  --hover-color: #ffc0cb5c;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 25px;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.App > div {
+  flex: 1;
+}
+
+.filter-nav {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.search-box {
+  border: none;
+  border-bottom: 1px solid #e54065;
+  height: 30px;
+  margin: 5px 20px;
+  padding-right: 10px;
+  transform: translate(0, 50%);
+}
+
+.filter-nav > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.filter-nav > ul > li {
+  padding: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--filter-button);
+  border: 1px solid var(--border-color);
+}
+
+.email-list {
+  flex: 2;
+}
+
+.email-card {
+  position: relative;
+  height: min-content;
+  display: flex;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+}
+.email-card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.multi-select {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.email-card:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+.avatar {
+  height: 50px;
+  aspect-ratio: 1;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.email-body {
+  border: red 1px solid;
+  flex: 3;
+  padding: 20px;
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.email-body-topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-body-topbar h1,
+h2 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.group-button {
+  min-width: 30%;
+  display: flex;
+}
+
+button {
+  height: min-content;
+  min-width: fit-content;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.favorite-btn {
+  background-color: var(--primary-color);
+  margin-right: 10px;
+  color: white;
+}
+.emails {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.read {
+  background-color: var(--read-background);
+}
+
+b {
+  font-weight: 600;
+}
+
+.navigator-buttons {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin-right: 10px;
+}
+
+.simple-btn {
+  padding: 0.3rem 0.6rem;
+  border: none;
+}
+select {
+  border: 1px solid #cfd2dc;
+  margin: 0 10px;
+}
