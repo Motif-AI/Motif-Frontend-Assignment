@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 // contains the email body
 const EmailDetail = (props) => {
@@ -22,17 +22,26 @@ const EmailDetail = (props) => {
           <div className="group-button">
             <button
               className="favorite-btn"
-              style={{ transform: "translate(0px, -4px)" }}
+              // style={{ transform: "translate(0px, -4px)" }}
               onClick={() => props.addToFav(id)}
             >
               {favorite ? "Remove from favorite" : "Mark as favorite"}
             </button>
-            <FontAwesomeIcon
+            <button
+              className="favorite-btn"
+              onClick={() => {
+                props.deleteEmail();
+              }}
+            >
+              Delete
+            </button>
+
+            {/* <FontAwesomeIcon
               icon={faTrash}
               onClick={() => {
                 props.deleteEmail();
               }}
-            />
+            /> */}
           </div>
         </div>
         <time dateTime={props.date.replaceAll("/", "-")}>{props.date}</time>

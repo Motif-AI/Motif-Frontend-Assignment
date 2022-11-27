@@ -3,8 +3,8 @@ import { getEmail, getEmailList } from "../utils/api";
 import EmailCard from "./EmailCard";
 import EmailDetail from "./EmailDetail";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const Mail = () => {
   // Current active tab.
@@ -283,7 +283,8 @@ const Mail = () => {
               setPageNum((p) => p - 1);
             }}
           >
-            <FontAwesomeIcon icon={faAngleLeft} size="1x" />
+            {/* <FontAwesomeIcon icon={faAngleLeft} size="1x" /> */}
+            {`<`}
           </button>
 
           <select
@@ -311,7 +312,8 @@ const Mail = () => {
               setPageNum((p) => p + 1);
             }}
           >
-            <FontAwesomeIcon icon={faAngleRight} size="1x" />
+            {/* <FontAwesomeIcon icon={faAngleRight} size="1x" /> */}
+            {`>`}
           </button>
         </div>
       </nav>
